@@ -1,0 +1,49 @@
+{
+    "name": "evadili/mangopay-bundle",
+    "type": "symfony-bundle",
+    "description": "This Bundle include Mangopay php sdk as a service",
+    "keywords": ["mangopay"],
+    "homepage": "",
+    "license": "MIT",
+    "minimum-stability": "dev",
+    "authors": [
+        {
+            "name": "Romain Hillairet",
+            "homepage": "http://www.evadili.com"
+        }
+    ],
+    "require": {
+        "php"                       : ">=5.3.3",
+        "symfony/framework-bundle"  : "~2.4",
+        "mangopay/mangopay2-php-sdk": "*"
+    },
+
+    "autoload": {
+        "psr-0": { "Evadili\\MangopayBundle": "" }
+    },
+
+    "target-dir": "Evadili/MangopayBundle",
+
+    "repositories": [
+
+    {
+      "type": "package",
+      "package": {
+        "name": "mangopay/mangopay2-php-sdk",
+        "version": "master",
+        "source": {
+            "url": "git://github.com/MangoPay/mangopay2-php-sdk.git",
+            "type": "git",
+            "reference": "master"
+        },
+        "dist": {
+            "url": "https://github.com/MangoPay/mangopay2-php-sdk/archive/master.zip",
+            "type": "zip"
+        },
+        "autoload": {
+            "files": ["MangoPaySDK/mangoPayApi.inc"]
+        }
+      }
+    }
+  ]
+}
